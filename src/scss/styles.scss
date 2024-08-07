@@ -1,0 +1,329 @@
+@import 'fonts';
+@import 'header';
+
+body {
+    font-family: 'Gilroy';
+    background-color: #242731;
+}
+body::after {
+  content: "";
+  height: 450px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 390px;
+  z-index: -1;
+  box-shadow: inset -64px -54px 83px 53px #242731;
+  background: linear-gradient(
+    to bottom,
+    rgba(47, 47, 99, 0.4) 0%,
+    rgba(51, 46, 102, 0.42) 10%,
+    rgba(52, 47, 99, 0.44) 20%,
+    rgba(51, 46, 102, 0.46) 30%,
+    rgba(48, 44, 101, 0.48) 40%,
+    rgba(51, 47, 102, 0.5) 50%,
+    rgba(50, 46, 100, 0.52) 60%,
+    rgba(48, 44, 100, 0.54) 70%,
+    rgba(51, 47, 102, 0.56) 80%,
+    rgba(49, 46, 99, 0.58) 90%,
+    rgba(52, 48, 100, 0.6) 100%
+  );
+}
+body::before {
+  content: "";
+  height: 450px;
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 390px;
+  z-index: -1;
+  box-shadow: inset 52px 0px 83px 53px #242731;
+  background: linear-gradient(
+    to bottom,
+    rgba(47, 47, 99, 0.4) 0%,
+    rgba(51, 46, 102, 0.42) 10%,
+    rgba(52, 47, 99, 0.44) 20%,
+    rgba(51, 46, 102, 0.46) 30%,
+    rgba(48, 44, 101, 0.48) 40%,
+    rgba(51, 47, 102, 0.5) 50%,
+    rgba(50, 46, 100, 0.52) 60%,
+    rgba(48, 44, 100, 0.54) 70%,
+    rgba(51, 47, 102, 0.56) 80%,
+    rgba(49, 46, 99, 0.58) 90%,
+    rgba(52, 48, 100, 0.6) 100%
+  );
+}
+@media (max-width: 768px) {
+  body::before,body::after {
+    display: none;
+  }
+}
+
+.container {
+    max-width: 915px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  
+    @media (max-width: 1170px) {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+    @media (max-width: 480px) {
+      max-width: 100%;
+      padding: 0 5px;
+    }
+}
+
+.webinar {
+  padding: 88px 0 0;
+  
+  @media (max-width: 768px) {
+    padding: 20px 0; // Adjust padding for mobile
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center; // Center items for smaller screens
+      padding: 15px 0; // Adjust padding for mobile
+    }
+  }
+
+  &__details {
+    padding: 10px 0;
+    flex: 2;
+
+    .btn {
+      background: #4252D1;
+      border-radius: 5px;
+      width: max-content;
+      padding: 6px 16px;
+      
+      @media (max-width: 768px) {
+        padding: 3px 10px;
+        margin: 0 auto;
+        font-size: 11px;
+      }
+    }
+
+    &-title {
+      color: #FF3459;
+      font-size: 77px;
+      font-weight: 800;
+      line-height: 93px;
+      text-align: left;
+      margin: 0;
+      
+      @media (max-width: 768px) {
+        font-size: 54px;
+        line-height: 62px;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+    }
+
+    &-subtitle {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 26px;
+      color: #fff;
+      margin: 0;
+
+      span {
+        display: inline-block;
+        font-size: 24px;
+        font-weight: 800;
+        background: #FF3459;
+        border-radius: 5px; 
+        transform: rotate(-3.51deg);
+        text-transform: uppercase;
+        padding: 7px 13px;
+        margin-right: 10px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        
+        span {
+          font-size: 16px;
+          margin-right: 10px;
+          padding: 5px 12px;
+        }
+      }
+    }
+
+    &-text {
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 27px;
+      color: #fff;
+      margin: 27px 20% 40px 0;
+
+      strong {
+        font-weight: 600;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 23px;
+        margin: 15px 0;
+        text-align: center;
+      }
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
+      &-text {
+        color: #fff;
+
+        &-name {
+          font-size: 13px;
+          font-weight: 700;
+          line-height: 15.6px;
+          margin: 20px 0 0;
+
+          span {
+            color: #4058d2;
+          }
+        }
+
+        &-desc {
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 19.2px;
+          margin: 3px 0;
+        }
+
+        &-bonus {
+          font-size: 1em;
+          font-weight: bold;
+          color: #ff5851;
+        }
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    &-item.mob {
+      display: none;
+
+      @media (max-width: 768px) {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+      }
+    }
+  }
+
+  &__form {
+    flex: 1;
+    background-color: #303b53;
+    padding: 30px 58px;
+    border-radius: 10px;
+
+    &-title {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 25.99px;
+      text-align: center;
+
+      span {
+        color: #ff5851;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      padding: 30px;
+    }
+  }
+
+  .formBlock {
+    &__input {
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 5px;
+      background-color: #272D3D;
+      color: #fff;
+      padding: 16px 7%;
+      width: calc(100% - 14%);
+
+      @media (max-width: 768px) {
+        padding: 14px 5%;
+        width: 90%;
+      }
+    }
+
+    &__btn {
+      padding: 16px 0;
+      width: 100%;
+      background-color: #ff5851;
+      border: none;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 15px;
+      cursor: pointer;
+
+      @media (max-width: 768px) {
+        padding: 14px 5%;
+        font-size: 14px;
+      }
+    }
+
+    &__privacy {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 17.88px;
+      text-align: center;
+      color: #ffffff50;
+
+      a {
+        font-weight: 500;
+        line-height: 17.88px;
+        text-decoration: underline;
+        color: #ffffff50;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 11px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+
+.block_text {
+  p {
+    font-size: 129.36px;
+    font-weight: 800;
+    color: #242731;
+    text-shadow: 0px 0px 0px #ffffff2b;
+    margin: 0;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
